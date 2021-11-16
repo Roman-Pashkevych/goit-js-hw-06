@@ -6,3 +6,16 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const ingredientsList = document.querySelector('#ingredients');
+console.log(ingredientsList);
+
+const markup = (item) => {
+  const element = document.createElement('li');
+  element.textContent = item;
+
+  return element;
+};
+const createMarkup = ingredients.map(markup);
+
+ingredientsList.append(...createMarkup);
